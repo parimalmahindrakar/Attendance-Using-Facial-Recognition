@@ -1,0 +1,6 @@
+__pycache__/
+VENV/
+*.pickle
+*.zip/
+*.json
+*.txt
