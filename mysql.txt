@@ -1,0 +1,28 @@
+To install the my sql server you need to type the following command : 
+'sudo apt-get install mysql-server'
+
+
+After installing it just you need to type :
+(for the password and all other kind of the stuff)
+"sudo mysql_secure_installation"
+
+ After that to start the mysql server you need to type the following command :
+ "sudo mysql -u root"
+
+But here is the problem that , if you do the program in python then root of the linux machine gonna give the left and right 
+i.e. if you are connecting the mysql to the python directly after installing python then "access denied" error that you will get it.
+So to avoid it , 
+
+do following , 
+
+
+$ sudo mysql -u root # I had to use "sudo" since is new installation
+
+mysql> USE mysql;
+mysql> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+mysql> FLUSH PRIVILEGES;
+mysql> 	
+
+
+
+Now you can happily run the program of the python.
