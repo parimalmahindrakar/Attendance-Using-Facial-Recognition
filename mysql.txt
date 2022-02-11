@@ -26,3 +26,9 @@ mysql>
 
 
 Now you can happily run the program of the python.
+
+
+
+
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+sql_mode = ""
